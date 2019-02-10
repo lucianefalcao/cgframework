@@ -26,7 +26,7 @@ void midPointLine(int xi, int xf, int yi, int yf, int cor[]){
     int incr_e = 2 * dy;
     int incr_ne = 2 * (dy - dx);
     putPixel(xi, yi, cor);
-    if(0 < m && m <= 1.0){
+    if((m > 0 && m <= 1.0) || m > 1.0){
         if(dx > dy){
             while (xi < xf) {
                 if (d <= 0) {
@@ -54,35 +54,47 @@ void midPointLine(int xi, int xf, int yi, int yf, int cor[]){
                     yi++;
                 }
                 putPixel(xi, yi, cor);
+            }
+            if(yi > yf){
+                int aux1 = xi;
+                int aux2 = yi;
+                xi = yf;
+                yi = xf;
+                xf = aux2;
+                yf = aux1;
+                midPointLine(xi, xf, yi,yf, cor);
             }
         }
     }
-    else if(m > 1.0){
-        if(dx > dy){
-            while (xi < xf) {
-                if (d <= 0) {
-                    d += incr_e;
-                    xi++;
-                } else {
+    else if(m < 0){
+        if(dx < dy){
+            d = 2*dx+dy;
+            incr_e = 2*(dx+dy);
+            incr_ne = 2 * dy;
+            while (xf < xi) {
+                if (d < 0) {
                     d += incr_ne;
-                    xi++;
-                    yi++;
+                    xf++;
+                } else {
+                    d += incr_e;
+                    yf--;
+                    xf++;
                 }
-                putPixel(xi, yi, cor);
+                putPixel(xf, yf, cor);
             }
         }
         else{
-            d = dy - 2*dx;
-            incr_e = 2*(dy - dx);
-            incr_ne = -2 * dy;
+            d = dy+2*dx;
+            incr_e = 2*dx;
+            incr_ne = 2 * (dy*dx);
             while(yi < yf){
                 if(d < 0){
-                    d += incr_e;
-                    yi++;
-                    xi++;
-                } else{
                     d += incr_ne;
-                    yi++;
+                    yf--;
+                } else{
+                    d += incr_e;
+                    yf--;
+                    xf++;
                 }
                 putPixel(xi, yi, cor);
             }
@@ -92,3 +104,4 @@ void midPointLine(int xi, int xf, int yi, int yf, int cor[]){
 
 
 #endif // _MYGL_H_
+
