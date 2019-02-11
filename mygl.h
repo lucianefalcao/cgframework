@@ -18,7 +18,7 @@ void putPixel(int x, int y, int cor[]){
 
 void midPointLine(int xi, int xf, int yi, int yf, int cor[]){
 
-    // 0 <= m <= 1 && 0 < m > 1
+    // 0 <= m <= 1
     float dx = xf - xi;
     float dy = yf - yi;
     float m = dy/dx;
@@ -39,21 +39,20 @@ void midPointLine(int xi, int xf, int yi, int yf, int cor[]){
                 }
                 putPixel(xi, yi, cor);
             }
+            if(xi > xf){
+                int aux1 = xi;
+                int aux2 = yi;
+                xi = xf;
+                yi = yf;
+                xf = aux2;
+                yf = aux1;
+                midPointLine(xi, xf, yi,yf, cor);
+            }
         }
         else{
             d = dy - 2*dx;
             incr_e = 2*(dy - dx);
             incr_ne = -2 * dy;
-            if(yi > yf){
-                int aux1 = xi;
-                int aux2 = yi;
-                xi = yf;
-                yi = xf;
-                xf = aux2;
-                yf = aux1;
-                midPointLine(xi, xf, yi,yf, cor);
-                return;
-            }
             while(yi < yf){
                 if(d < 0){
                     d += incr_e;
@@ -65,10 +64,17 @@ void midPointLine(int xi, int xf, int yi, int yf, int cor[]){
                 }
                 putPixel(xi, yi, cor);
             }
-          
+            if(yi > yf){
+                int aux1 = xi;
+                int aux2 = yi;
+                xi = yf;
+                yi = xf;
+                xf = aux2;
+                yf = aux1;
+                midPointLine(xi, xf, yi,yf, cor);
+            }
         }
     }
-    // m < 0
     else if(m < 0){
         if(dx < dy){
             d = 2*dx+dy;
@@ -84,6 +90,15 @@ void midPointLine(int xi, int xf, int yi, int yf, int cor[]){
                     xf++;
                 }
                 putPixel(xf, yf, cor);
+            }
+            if(yi > yf){
+                int aux1 = xi;
+                int aux2 = yi;
+                xi = xf;
+                yi = yf;
+                xf = aux2;
+                yf = aux1;
+                midPointLine(xi, xf, yi,yf, cor);
             }
         }
         else{
