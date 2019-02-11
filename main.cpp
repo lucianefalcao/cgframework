@@ -12,9 +12,11 @@ void MyGlDraw(void)
     int red[4] = {255, 0, 0, 1};
     int blue[4] = {0, 0, 255, 1};
     int green[4] = {0, 255, 0, 1};
+    int purple[4] = {150, 90, 255, 1};
+    int pink[4] = {255, 90, 150, 1};
+    int yellow[4] = {255, 200, 100, 1};
 
-   /* putPixel(40, 40, ar);
-    putPixel(45, 40, ar);
+    /*putPixel(45, 40, ar);
     putPixel(30, 40, ar);
     putPixel(20, 40, ar);
     putPixel(35, 40, ar);
@@ -41,11 +43,15 @@ void MyGlDraw(void)
    putPixel(60,30, blue);
    putPixel(65,30, blue);*/
 
-   //midPointLine(200, 400, 200, 500, red);
-   midPointLine(200,400,200,400, blue);
-   midPointLine(200,201,200,400, red);
-   midPointLine(200,0,200,201, green);
-   midPointLine(200,0,200,0, red);
+  // midPointLine(200, 0, 200, 400, red);
+   //midPointLine(200,400,200,400, blue);
+   //midPointLine(200,201,200,400, purple);
+   //midPointLine(200,0,200,201, green);
+   //midPointLine(200,0,200,0, pink);
+   //midPointLine(100,101,0,200, yellow);
+   //midPointLine(400,200,0,200, red);
+   //midPointLine(200,510,200,201, green);
+   midPointLine(600, 1, 600, 0, pink);
 }
 
 //-----------------------------------------------------------------------------
