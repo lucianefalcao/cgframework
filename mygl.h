@@ -4,6 +4,7 @@
 #include "definitions.h"
 #include "math.h"
 #include <vector>
+#include <stdlib.h>
 
 //*****************************************************************************
 // Defina aqui as suas funções gráficas
@@ -16,12 +17,46 @@ void putPixel(int x, int y, int cor[]){
     }
 }
 
-void midPointLine(int xi, int xf, int yi, int yf, int cor[]){
+/*int *random(){
+    int a[3] = {0, 0, 0};
+        for(int i = 0; i < 3; i++){
+            int r = rand() % 255;
+            if(r >= 0 && r <= 255){
+                a[i] = r;
+            }
+        }
+
+    return a;
+}*/
+
+void interpolation(int i, int cor[]){
+    cor[0] = i;
+    cor[1] = 150-i;
+}
+/*void interpolation(int cor[], int b[]){
+    float t = 0.5;
+    for(int i = 0; i < 3; i++){
+        //gera números aleatórios entre 0 e 255
+            int r = rand() % 255;
+            if(r >= 0 && r <= 255){
+            //coloca os números dentro do array
+                b[i] = r;
+            }
+        }
+    //int *p = random();
+    cor[0] = cor[0] + (b[0] - cor[0]) * t;
+    cor[1] = cor[1] + (b[1] - cor[1]) * t;
+    cor[2] = cor[2] + (b[2] - cor[2]) * t;
+}*/
+
+void drawLine(int xi, int xf, int yi, int yf, int cor[]){
 
     // 0 <= m <= 1
+    int a[4] = {200,100,200,1};
     float dx = xf - xi;
     float dy = yf - yi;
     float m = dy/dx;
+    int i = 0;
     int d = 2 * dy - dx;
     int incr_e = 2 * dy;
     int incr_ne = 2 * (dy - dx);
@@ -37,7 +72,9 @@ void midPointLine(int xi, int xf, int yi, int yf, int cor[]){
                     xi++;
                     yi++;
                 }
+                interpolation(i, cor);
                 putPixel(xi, yi, cor);
+                i++;
             }
             if(xi > xf){
                 int aux1 = xi;
@@ -46,7 +83,7 @@ void midPointLine(int xi, int xf, int yi, int yf, int cor[]){
                 yi = yf;
                 xf = aux2;
                 yf = aux1;
-                midPointLine(xi, xf, yi,yf, cor);
+                drawLine(xi, xf, yi,yf, cor);
             }
         }
         else{
@@ -62,7 +99,9 @@ void midPointLine(int xi, int xf, int yi, int yf, int cor[]){
                     d += incr_ne;
                     yi++;
                 }
+                interpolation(i, cor);
                 putPixel(xi, yi, cor);
+                i++;
             }
             if(yi > yf){
                 int aux1 = xi;
@@ -71,7 +110,7 @@ void midPointLine(int xi, int xf, int yi, int yf, int cor[]){
                 yi = xf;
                 xf = aux2;
                 yf = aux1;
-                midPointLine(xi, xf, yi,yf, cor);
+                drawLine(xi, xf, yi,yf, cor);
             }
         }
     }
@@ -89,7 +128,10 @@ void midPointLine(int xi, int xf, int yi, int yf, int cor[]){
                     yf--;
                     xf++;
                 }
+                interpolation(i, cor);
+                //interpolation(cor, a);
                 putPixel(xf, yf, cor);
+                i++;
             }
             if(yi > yf){
                 int aux1 = xi;
@@ -98,7 +140,7 @@ void midPointLine(int xi, int xf, int yi, int yf, int cor[]){
                 yi = yf;
                 xf = aux2;
                 yf = aux1;
-                midPointLine(xi, xf, yi,yf, cor);
+                drawLine(xi, xf, yi,yf, cor);
             }
         }
         else{
@@ -114,7 +156,10 @@ void midPointLine(int xi, int xf, int yi, int yf, int cor[]){
                     yf--;
                     xf++;
                 }
+                interpolation(i,cor);
+                //interpolation(cor, a);
                 putPixel(xi, yi, cor);
+                i++;
             }
         }
     }
