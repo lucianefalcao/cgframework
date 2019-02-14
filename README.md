@@ -8,7 +8,7 @@
 	
 	A primeira função, foi chamada de putPixel, que tinha como propósito desenhar pixels na janela de exibição a partir de parâmetros informados pelo programador, dada a posição do pixel em x e y, e as suas cores RGBA (No algoritmo, foi-se utilizado um array de inteiros para guardar o valor de cada cor do pixel).
 
-
+![](Images/putPixel.PNG)
 
 	Já que os pixels são formados por 4 bytes que representam as cores, o método usado para percorrer todo o Buffer foi, dada a posição de X, multiplicada pela quantidade de bytes que podem ser armazenados em cada pixel, somado à cada posição do array das cores passadas como parâmetro (Nesse caso em particular, o algoritmo percorre o Color Buffer em X. Para fazê-lo percorrer em Y, aplica-se o mesmo sistema, exceto somar com a posição de cada cor do array informado. 
 
