@@ -14,20 +14,17 @@
 
 
 <p float="left">
-  <img src="Images/pixels.png" />
-  <img src="Images/pixels2.png" width="200" /> 
+  <img align="left" src="Images/pixels.png" />	
+  <img align="right" src="Images/pixels2.png" width="200" /> 
 </p>
                
 
+<img align="center" src="Images/line.PNG"/> 
 
-
-![](Images/line.PNG)
-**Função drawLine**
-
-E por fim, a função DrawTriangle, que pedia para desenhar triângulos na janela. Em comparação com as outras funções, essa foi a mais simples de ser implementada, já que, após resolver o problema dos quadrantes na função DrawLine, nos permitiu a rasterização de linhas em qualquer direção, então, para desenhar os triângulos só seriam necessárias três linhas de vértices semelhantes. 
+	E por fim, a função DrawTriangle, que pedia para desenhar triângulos na janela. Em comparação com as outras funções, essa foi a mais simples de ser implementada, já que, após resolver o problema dos quadrantes na função DrawLine, nos permitiu a rasterização de linhas em qualquer direção, então, para desenhar os triângulos só seriam necessárias três linhas de vértices semelhantes. 
 
 
 
-Conclusão
+#Conclusão
 
 	O projeto nos fez raciocinar um pouco sobre como funciona a programação gráfica. Algo que de certa forma é complexo porém bastante poderoso. A minuciosidade de trabalhar com cada pixel na tela, com cada byte por pixel, só nos faz perceber o quão incrível é a área. Tendo em vista isso, já era de se esperar que houvessem bugs em alguns casos propostos, principalmente na parte da interpolação das cores nas linhas (Só reiterando, a parte mais complexa).
