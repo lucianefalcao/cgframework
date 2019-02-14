@@ -23,8 +23,9 @@
 
 	E por fim, a função DrawTriangle, que pedia para desenhar triângulos na janela. Em comparação com as outras funções, essa foi a mais simples de ser implementada, já que, após resolver o problema dos quadrantes na função DrawLine, nos permitiu a rasterização de linhas em qualquer direção, então, para desenhar os triângulos só seriam necessárias três linhas de vértices semelhantes. 
 
+![](Images/Triangle.PNG)
 
 
-#Conclusão
+# Conclusão
 
 	O projeto nos fez raciocinar um pouco sobre como funciona a programação gráfica. Algo que de certa forma é complexo porém bastante poderoso. A minuciosidade de trabalhar com cada pixel na tela, com cada byte por pixel, só nos faz perceber o quão incrível é a área. Tendo em vista isso, já era de se esperar que houvessem bugs em alguns casos propostos, principalmente na parte da interpolação das cores nas linhas (Só reiterando, a parte mais complexa).
