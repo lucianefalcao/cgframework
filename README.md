@@ -1,11 +1,14 @@
-Introdução
+# Introdução
 
-	O presente projeto tinha como finalidade introduzir aos alunos da disciplina uma noção de programação voltada para a Computação Gráfica. Promovendo a rasterização de pontos, linhas e triângulos, por meio de algoritmos como o de Bresenham, utilizando bibliotecas gráficas da linguagem C, como o OpenGL.
+	O presente projeto tinha como finalidade introduzir aos alunos da disciplina uma noção de programação voltada para 
+	a Computação Gráfica. Promovendo a rasterização de pontos, linhas e triângulos, por meio de algoritmos como o 
+	de Bresenham, utilizando bibliotecas gráficas da linguagem C, como o OpenGL.
 
-Desenvolvimento
+# Desenvolvimento
 
 	O projeto foi dividido em três partes. Cada uma delas consistia em desenvolver uma função para cada tipo de rasterização.
-A primeira função, foi chamada de putPixel, que tinha como propósito desenhar pixels na janela de exibição a partir de parâmetros informados pelo programador, dada a posição do pixel em x e y, e as suas cores RGBA (No algoritmo, foi-se utilizado um array de inteiros para guardar o valor de cada cor do pixel).
+	
+	A primeira função, foi chamada de putPixel, que tinha como propósito desenhar pixels na janela de exibição a partir de parâmetros informados pelo programador, dada a posição do pixel em x e y, e as suas cores RGBA (No algoritmo, foi-se utilizado um array de inteiros para guardar o valor de cada cor do pixel).
 
 
 
@@ -20,7 +23,8 @@ A primeira função, foi chamada de putPixel, que tinha como propósito desenhar
 
 
 
-
+![](Images/line.PNG)
+**Função drawLine**
 
 E por fim, a função DrawTriangle, que pedia para desenhar triângulos na janela. Em comparação com as outras funções, essa foi a mais simples de ser implementada, já que, após resolver o problema dos quadrantes na função DrawLine, nos permitiu a rasterização de linhas em qualquer direção, então, para desenhar os triângulos só seriam necessárias três linhas de vértices semelhantes. 
 
