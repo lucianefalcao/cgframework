@@ -13,7 +13,7 @@ A primeira função, foi chamada de putPixel, que tinha como propósito desenhar
 
 
 
-![](Images/pixels.png)                        
+![](Images/pixels.png)                                                              ![](Images/pixels2.png)                
 
 
 
