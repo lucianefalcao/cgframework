@@ -13,7 +13,11 @@ A primeira função, foi chamada de putPixel, que tinha como propósito desenhar
 
 
 
-![](Images/pixels.png)                                                              ![](Images/pixels2.png)                
+<p float="left">
+  <img src="/pixels.png" width="200" />
+  <img src="/pixels2.png" width="200" /> 
+</p>
+               
 
 
 
