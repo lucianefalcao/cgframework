@@ -12,10 +12,9 @@ A primeira função, foi chamada de putPixel, que tinha como propósito desenhar
 	Já que os pixels são formados por 4 bytes que representam as cores, o método usado para percorrer todo o Buffer foi, dada a posição de X, multiplicada pela quantidade de bytes que podem ser armazenados em cada pixel, somado à cada posição do array das cores passadas como parâmetro (Nesse caso em particular, o algoritmo percorre o Color Buffer em X. Para fazê-lo percorrer em Y, aplica-se o mesmo sistema, exceto somar com a posição de cada cor do array informado. 
 
 
-
 <p float="left">
-  <img src="/pixels.png" width="200" />
-  <img src="/pixels2.png" width="200" /> 
+  <img src="Images/pixels.png" />
+  <img src="Images/pixels2.png" width="200" /> 
 </p>
                
 
