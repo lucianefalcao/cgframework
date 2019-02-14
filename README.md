@@ -1,8 +1,6 @@
 # Introdução
 
-	O presente projeto tinha como finalidade introduzir aos alunos da disciplina uma noção de programação voltada para 
-	a Computação Gráfica. Promovendo a rasterização de pontos, linhas e triângulos, por meio de algoritmos como o 
-	de Bresenham, utilizando bibliotecas gráficas da linguagem C, como o OpenGL.
+	O presente projeto tinha como finalidade introduzir aos alunos da disciplina uma noção de programação voltada para a Computação Gráfica. Promovendo a rasterização de pontos, linhas e triângulos, por meio de algoritmos como o de Bresenham, utilizando bibliotecas gráficas da linguagem C, como o OpenGL.
 
 # Desenvolvimento
 
