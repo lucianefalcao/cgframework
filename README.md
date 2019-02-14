@@ -18,7 +18,7 @@
   <img align="right" src="Images/pixels2.png" width="200" /> 
 </p>
                
-
+</br>
 <img align="center" src="Images/line.PNG"/> 
 
 	E por fim, a função DrawTriangle, que pedia para desenhar triângulos na janela. Em comparação com as outras funções, essa foi a mais simples de ser implementada, já que, após resolver o problema dos quadrantes na função DrawLine, nos permitiu a rasterização de linhas em qualquer direção, então, para desenhar os triângulos só seriam necessárias três linhas de vértices semelhantes. 
