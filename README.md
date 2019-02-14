@@ -29,3 +29,7 @@
 # Conclusão
 
 	O projeto nos fez raciocinar um pouco sobre como funciona a programação gráfica. Algo que de certa forma é complexo porém bastante poderoso. A minuciosidade de trabalhar com cada pixel na tela, com cada byte por pixel, só nos faz perceber o quão incrível é a área. Tendo em vista isso, já era de se esperar que houvessem bugs em alguns casos propostos, principalmente na parte da interpolação das cores nas linhas (Só reiterando, a parte mais complexa).
+
+# Contribuidores
+* Luciane Zuleide Lima Falcão de Freitas lucianefreitas@cc.ci.ufob.br
+* João Paulo Silva Martins joaopsilvam88@gmail.com
