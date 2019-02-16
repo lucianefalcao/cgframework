@@ -1,4 +1,3 @@
-
 #include <iostream>
 #include "main.h"
 #include "mygl.h"
@@ -6,7 +5,7 @@
 //-----------------------------------------------------------------------------
 void MyGlDraw(void)
 {
-	//*************************************************************************
+
 	// Chame aqui as funções do mygl.h
 	//**************************************************************************
     int red[4] = {255, 0, 0, 1};
@@ -43,21 +42,18 @@ void MyGlDraw(void)
    putPixel(60,30, blue);
    putPixel(65,30, blue);*/
 
-  // midPointLine(200, 0, 200, 400, red);
-   //midPointLine(200,400,200,400, blue);
-   //midPointLine(200,201,200,400, purple);
-   //midPointLine(200,0,200,201, green);
-   //midPointLine(200,0,200,0, pink);
-   //midPointLine(100,101,0,200, yellow);
-   //midPointLine(400,200,0,200, red);
-   //midPointLine(200,510,200,201, green);
-   midPointLine(600, 1, 600, 0, pink);
+   //drawLine(200,510,200,201, green);
+   //drawLine(600, 1, 600, 0, blue);
+   drawLine(9,500,10,11, blue);
+   drawLine(9,250,10,250, blue);
+   drawLine(500,250,10,250, blue);
 }
 
 //-----------------------------------------------------------------------------
 int main(int argc, char **argv)
 {
 	// Inicializações.
+
 	InitOpenGL(&argc, argv);
 	InitCallBacks();
 	InitDataStructures();
