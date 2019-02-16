@@ -31,9 +31,13 @@ void interpolation(int i, int cor[]){
 }
 
 
-void drawLine(int xi, int xf, int yi, int yf, int cor[]){
+void drawLine(Posicao pos, int cor[]){
 
     // 0 <= m <= 1
+    int xi = pos.xi;
+    int xf = pos.xf;
+    int yi = pos.yi;
+    int yf = pos.yf;
     float dx = xf - xi;
     float dy = yf - yi;
     float m = dy/dx;
@@ -64,7 +68,12 @@ void drawLine(int xi, int xf, int yi, int yf, int cor[]){
                 yi = yf;
                 xf = aux2;
                 yf = aux1;
-                drawLine(xi, xf, yi,yf, cor);
+                Posicao p;
+                p.xi = xi;
+                p.xf = xf;
+                p.yi = yi;
+                p.yf = yf;
+                drawLine(p, cor);
             }
         }
         else{
@@ -91,7 +100,12 @@ void drawLine(int xi, int xf, int yi, int yf, int cor[]){
                 yi = xf;
                 xf = aux2;
                 yf = aux1;
-                drawLine(xi, xf, yi,yf, cor);
+                Posicao p;
+                p.xi = xi;
+                p.xf = xf;
+                p.yi = yi;
+                p.yf = yf;
+                drawLine(p, cor);
             }
         }
     }
@@ -120,7 +134,12 @@ void drawLine(int xi, int xf, int yi, int yf, int cor[]){
                 yi = yf;
                 xf = aux2;
                 yf = aux1;
-                drawLine(xi, xf, yi,yf, cor);
+                Posicao p;
+                p.xi = xi;
+                p.xf = xf;
+                p.yi = yi;
+                p.yf = yf;
+                drawLine(p, cor);
             }
         }
         else{
@@ -142,6 +161,12 @@ void drawLine(int xi, int xf, int yi, int yf, int cor[]){
             }
         }
     }
+}
+
+void drawTriangles(Posicao p1, Posicao p2, Posicao p3, int cor[]){
+    drawLine(p1, cor);
+    drawLine(p2, cor);
+    drawLine(p3, cor);
 }
 
 
